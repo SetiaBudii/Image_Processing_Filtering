@@ -1,0 +1,339 @@
+{% extends "layout.html" %} {% block body %}
+<div class="section_our_solution">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="our_solution_category ">
+                <div class="solution_cards_box">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/Umum.png">
+                        </div>
+                        <div class="solu_title  text-center">
+                            <h3>Umum</h3>
+                        </div>
+                        <div class="solu_description  pb-3 text-center">
+                            <form id="" action="{{ url_for('normal') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Normal</button>
+                            </form>
+                            <form id="" action="{{ url_for('grayscale') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Grayscale</button>
+                            </form>
+                            <form id="" action="{{ url_for('zoomin') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Zoom In</button>
+                            </form>
+                            <form id="" action="{{ url_for('zoomout') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Zoom Out</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/move.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <h3>Pergeseran</h3>
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('move_left') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Geser Kiri</button>
+                            </form>
+                            <form id="" action="{{ url_for('move_right') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Geser Kanan</button>
+                            </form>
+                            <form id="" action="{{ url_for('move_up') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Geser Atas</button>
+                            </form>
+                            <form id="" action="{{ url_for('move_down') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Geser Bawah</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution_cards_box sol_card_top_3">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/brightness.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <h3>Penerangan</h3>
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('brightness_multiplication') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Terang (*)</button>
+                            </form>
+                            <form id="" action="{{ url_for('brightness_division') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Gelap (/)</button>
+                            </form>
+                            <form id="" action="{{ url_for('brightness_addition') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Terang (+)</button>
+                            </form>
+                            <form id="" action="{{ url_for('brightness_substraction') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Gelap (-)</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/histogram.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <h3>Analisis Gambar</h3>
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('histogram_rgb') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Histogram</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution_cards_box ">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/equalizer.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <h3>Pemprosesan</h3>
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('histogram_equalizer') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Histogram Equalizer</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/filter.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <h3>Filter Gambar</h3>
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('edge_detection') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Edge Detection</button>
+                            </form>
+                            <form id="" action="{{ url_for('blur') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Blur</button>
+                            </form>
+                            <form id="" action="{{ url_for('sharpening') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Sharpening</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution_cards_box sol_card_top_3">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/segmentation.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <h3>Segmentasi</h3>
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('thresholding') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <table class="table table-sm ">
+                                    <thead>
+                                        <tr>
+                                            <th>Batas Bawah</th>
+                                            <th>Batas Atas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="number" name="lower_thres" placeholder="0-255"></td>
+                                            <td><input type="number" name="upper_thres" placeholder="0-255"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><button type="submit"
+                                                    class="btn btn-primary">Thresholding</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="height:5px;border:none;color:#fff;background-color:#fff;">
+    <h3 class="text-center m-5 text-white fw-bold ">Week 6</h3>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="our_solution_category ">
+                <div class="solution_cards_box">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/Umum.png">
+                        </div>
+                        <div class="solu_title text-center mb-3 ">
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('zeropadding') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary my-1">Zero Padding</button>
+                            </form>
+                            <form id="" action="{{ url_for('lowpassfilter') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary my-1">Low Pass Filter</button>
+                            </form>
+                            <form id="" action="{{ url_for('highpassfilter') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary my-1">High Pass Filter</button>
+                            </form>
+                            <form id="" action="{{ url_for('bandpassfilter') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary my-1">Band Pass Filter</button>
+                            </form>
+                            <form id="" action="{{ url_for('sharpening') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Sharpen</button>
+                            </form>
+                            <form id="" action="{{ url_for('blur') }}" method="POST" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Blur</button>
+                            </form>
+                            <form id="" action="{{ url_for('bilateralblur') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-primary m-1">Bilateral Filter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution_cards_box">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/Umum.png">
+                        </div>
+                        <div class="solu_title  text-center">
+                        </div>
+                        <div class="solu_description  pb-3 text-center">
+                            <form id="" action="{{ url_for('gaussianblur') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <p class="mt-2 fw-bold">Gaussian Blur</p>
+                                <input type="number" id="size" name="size" class="m-2" placeholder="Masukan size blur">
+                                <button type="submit" class="btn btn-primary">Submit</button></td>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/Umum.png">
+                        </div>
+                        <div class="solu_title text-center">
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('medianblur') }}" method="POST"
+                            enctype="multipart/form-data">
+                            <p class="mt-2 fw-bold">Median Blur</p>
+                            <input type="number" id="size" name="size" class="m-2"
+                                placeholder="Masukan size blur">
+                            <button type="submit" class="btn btn-primary ">Submit</button></td>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/Umum.png">
+                        </div>
+                        <div class="solu_title text-center">
+                        </div>
+                        <div class="solu_description text-center">
+                            <form id="" action="{{ url_for('blurwithsize') }}" method="POST"
+                                enctype="multipart/form-data">
+                                <p class="mt-2 fw-bold">Blur</p>
+                                <input type="number" id="size" name="size" class="m-2" placeholder="Masukan size blur">
+                                <button type="submit" class="btn btn-primary">Submit</button></td>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution_cards_box sol_card_top_3">
+                    <div class="solution_card">
+                        <div class="hover_color_bubble"></div>
+                        <div class="so_top_icon mx-auto">
+                            <img src="../static/img/Umum.png">
+                        </div>
+                        <div class="solu_title text-center">
+                            <div class="solu_description text-center mt-1">
+                                <form id="" action="{{ url_for('lowpassfilterCustom') }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    <p class="fw-bold">Lowpass Filter (generated kernel)</p>
+                                    <div class="row mt-1 input-filter mx-0">
+                                        <div class="col-6">
+                                            <input type="number" id="size" name="size" class="m-2" placeholder="Size Kernel">
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-primary my-1">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <form id="" action="{{ url_for('highpassfilterCustom') }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    <p class="fw-bold">Highpass Filter (generated kernel)</p>
+                                    <div class="row mt-1 input-filter mx-0">
+                                        <div class="col-6">
+                                            <input type="number" id="size" name="size" class="m-2" placeholder="Size Kernel">
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-primary my-1">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <form id="" action="{{ url_for('bandpassfilterCustom') }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    <p class="fw-bold">Bandpass Filter (generated kernel)</p>
+                                    <div class="row mt-1 input-filter mx-0">
+                                        <div class="col-6">
+                                            <input type="number" id="size" name="size" class="m-2" placeholder="Size Kernel">
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-primary my-1">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border m-5 text-center pt-3 after-image mx-auto shadow-lg">
+            <div class="col-lg-12 d-flex justify-content-center align-content-center ">
+                <h3>Before</h3>
+            </div>
+            <div class="col-lg-12">
+                <img class="img-fluid mb-3 rounded" src="{{ url_for('static', filename=old_path) }}" alt="image here">
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center align-content-center ">
+                <h3>After</h3>
+            </div>
+            <div class="col-lg-12">
+                <img class="img-fluid mb-3 rounded" src="{{ url_for('static', filename=file_path) }}" alt="image here">
+            </div>
+        </div>
+    </div>
+    <style>
+    </style>
+    {% endblock %}
